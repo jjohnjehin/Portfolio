@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Stebin Milton landing page.">
+    <meta name="author" content="Devcrud">
+    <title>John Jehin | Portfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + stebin milton main styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media only screen and (max-width:578px) {
+            .navicon {
+                margin-left: -50%;
+            }
+
+            .names {
+                margin-top: 150%;
+                margin-right: 40%;
+            }
+
+        }
+    </style>
+    <!-- Typing effect style -->
+    <style>
+        @media only screen and (max-width:578px) {
+            .navicon {
+                margin-left: -50%;
+            }
+
+            .names {
+                margin-top: 150%;
+                margin-right: 40%;
+            }
+
+        }
+        .typing-effect {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #ff4757; /* Cursor effect */
+            width: 0;
+            animation: typing 5s steps(27, end) infinite alternate, blink 0.7s infinite;
+        }
+        
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 35ch; } /* Adjust based on text length */
+            100% { width: 0; }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        
+    </style>
+    <!-- Typing effect script -->
+    <script>
+        const TypingEffect = ({ text, speed = 100, delay = 2000 }) => {
+            const [displayedText, setDisplayedText] = useState("");
+            const [index, setIndex] = useState(0);
+          
+            useEffect(() => {
+              if (index < text.length) {
+                const timeout = setTimeout(() => {
+                  setDisplayedText((prev) => prev + text[index]);
+                  setIndex((prev) => prev + 1);
+                }, speed);
+                return () => clearTimeout(timeout);
+              } else {
+                setTimeout(() => {
+                  setDisplayedText("");
+                  setIndex(0);
+                }, delay);
+              }
+            }, [index, text, speed, delay]);
+          
+            return <span>{displayedText}</span>;
+          };
+    </script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="cur" style="overflow-x: hidden;">
+
+    <!-- <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i
+            class="ti-shift-left-alt"></i> Components</a> -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <header class="header">
+
+
+        <div class="container-fluid h-100" style="background-image:url(./assets/imgs/Jehin.jpg);background-repeat:no-repeat;background-size:cover;background-position:center">
+            <div class="navicon">
+                <div class="row h-25">
+
+                    <div class="col-sm-10 mx-5 mt-4">
+                        <ul class="social-icons">
+                            <li class="social-item"><a class="social-link text-light"
+                                    href="#" target="_blank"><i
+                                        class="ti-facebook" aria-hidden="true" style="color:red"></i></a></li>
+                            <li class="social-item"><a class="social-link text-light"
+                                    href="#"><i class="ti-twitter" aria-hidden="true" style="color:red"></i></a>
+                            </li>
+                            <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-google"
+                                        aria-hidden="true" style="color:red"></i></a></li>
+                            <li class="social-item"><a class="social-link text-light"
+                                    href="https://www.instagram.com/santa_de_john7?igsh=cGpwaDJlMzFueHJi" target="_blank"><i
+                                        class="ti-instagram" aria-hidden="true" style="color:red"></i></a></li>
+                            <li class="social-item"><a class="social-link text-light"
+                                    href="https://www.linkedin.com/in/john-jehin-j/"><i class="ti-linkedin"
+                                        aria-hidden="true" style="color:red"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+            <div class="row  h-75 mx-5">
+                <div class="col-sm-10">
+                    <div class="names">
+                        <div class="header-content">
+                            <h4 class="header-subtitle">Hello, I am</h4>
+                            <h1 class="header-title">Jehin</h1>
+                            <h6 class="header-mono">
+                                <span class="typing-effect">Full Stack Web | Developer</span>
+                            </h6>
+                            <button class="btn btn-primary btn-rounded" onclick="handlePrintResume()"><i class="ti-printer pr-2"></i>Print
+                                Resume</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+
+
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="./assets/imgs/Jehin2.jpg" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">John Jehin</h5>
+                        <div class="brand-subtitle">Full Stack | Developer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Who am I ?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">A Web Designer / Developer Located In Our Lovely Earth</h5>
+                <p class="mt-20">A versatile problem solver, proficient in both front-end and back-end technologies,
+                    shaping digital experiences with your expertise as a full stack developer.</p>
+                <button class="btn btn-outline-danger" onclick="handleDownloadCv()"><i class="icon-down-circled2 "></i>Download My CV</button>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birthdate</span> : 06/12/2000</li>
+                    <li><span>Email</span> : johnjehin.jj@gmail.com</li>
+                    <li><span>Phone</span> : (+91) 7418876749</li>
+                    <li><span>Address</span> :Azhickal,kanyakumari, Tamilnadu,India</li>
+                </ul>
+                <ul class="social-icons pt-3">
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google"
+                                aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link"
+                            href="https://www.instagram.com/santa_de_john7?igsh=cGpwaDJlMzFueHJi" target="_blank"><i
+                                class="ti-instagram" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link"
+                            href="https://www.linkedin.com/in/john-jehin-j/"><i class="ti-linkedin"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Expertise</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>React</h6>
+                        <p class="subtitle"> Proficient in developing user interfaces using React.js, leveraging its
+                            component-based architecture for scalable web applications..</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Web Development</h6>
+                        <p class="subtitle">A web developer with expertise crafts responsive and dynamic websites using
+                            a range of programming languages, frameworks, and tools.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6></h6>
+                        <p class="subtitle">voluptate commodi illo voluptatib.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Resume Section-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Expertise</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">2024 - Present</h6>
+                            <P>Full Stack Developer</P>
+
+                            <P class="subtitle">"Building bridges from front-end finesse to back-end brilliance,
+                                mastering the full-stack journey in just one year."</P>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                            <hr>
+                            <br>
+                            <br>
+                            <h6 class="title text-danger">2023 - 2024</h6>
+                            <P>"From the Designing to Code: My Journey from Designer to Front-End Developer"</P>
+                            <P class="subtitle">Worked as a Graphic Designer at Neelam Designs for one year, gaining hands-on experience in designing. Collaborated closely with the team to create visually appealing designs. Developed expertise in poster design, visiting cards, and video editing. Contributed creative ideas to enhance branding and marketing materials. Strengthened teamwork and communication skills while delivering high-quality design solutions.</P>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br><br>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Education</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">2023 - 2024</h6>
+                            <P>Full Stack Web Developer Course</P>
+                            <P class="subtitle"> Completed Full Stack Web Developer Course in (Rexknar Coding Accademy,
+                                Nagercoil) "Empowering Digital Frontiers: Journey of a Full Stack Web Developer."</P>
+                            <br>
+                            <br>
+                            <br>
+                            <hr>
+                            <h6 class="title text-danger">2018 - 2021</h6>
+                            <P>Bachelor of Computer Science</P>
+                            <P class="subtitle">Completed Computer Science Engineering in (SRM Institute of Science and Technology,Chennai) "Dive into the Digital World: Exploring Computer Science
+                                Engineering Through My Journey."</P> <br>
+                            <br>
+                            <br>
+                            <hr>
+                            <h6 class="title text-danger">2016 - 2018</h6>
+                            <P>High School Degree</P>
+                            <P class="subtitle">Completed High School Educational Degree in (CMC Matric Higher
+                                Secondary School Konam)&(Babuji Memorial School, Manavalkurchy)"Educated Excellence:
+                                High School Achievements and Beyond"</P>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Skills</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                            <h6 class="lan">HTML5 &amp; CSS3</h6>
+                            <div class="html">
+                                <div class="html-bar">
+                                </div>
+                            </div>
+
+                            <h6 class="lan">Boostrap  &amp; Tailwind</h6>
+                            <div class="boostrap">
+                                <div class="boostrap-bar">
+                                </div>
+                            </div>
+
+                            <h6 class="lan">Media Query</h6>
+                            <div class="mediaQuery">
+                                <div class="media-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Python</h6>
+                            <div class="python">
+                                <div class="python-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">JavaScript</h6>
+                            <div class="js">
+                                <div class="js-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">React.Js</h6>
+                            <div class="react">
+                                <div class="react-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Node.JS</h6>
+                            <div class="node">
+                                <div class="node-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Express.JS</h6>
+                            <div class="js">
+                                <div class="js-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Angular</h6>
+                            <div class="angular">
+                                <div class="angular-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Next.js</h6>
+                            <div class="php">
+                                <div class="php-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">SQL</h6>
+                            <div class="sql">
+                                <div class="sql-bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Languages</h4>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                            <h6 class="lan">Tamil</h6>
+                            <div class="tamil">
+                                <div class="tamil-bar">
+                                </div>
+                            </div>
+
+                            <h6 class="lan">English</h6>
+                            <div class="english">
+                                <div class="english-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Malayalam</h6>
+                            <div class="malayalam">
+                                <div class="malayalam-bar">
+                                </div>
+                            </div>
+                            <h6 class="lan">Hindi</h6>
+                            <div class="hindi">
+                                <div class="hindi-bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="row ">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">500+</h1>
+                            <p class="text-light mb-1">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">05+</h1>
+                            <p class="text-light mb-1">Project Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">10+</h1>
+                            <p class="text-light mb-1">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">4k</h1>
+                            <p class="text-light mb-1">Coffee Drinked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="service">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">Do You Know?</span> I Can Do...</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-vector text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Web Development Projects</h5>
+                            <P class="subtitle">"Transforming Ideas into Digital Realities: Crafting bespoke web
+                                solutions tailored to your needs. Explore a portfolio brimming with innovative web
+                                development projects. From captivating user experiences to robust back-end systems, we
+                                deliver excellence at every stage. Elevate your online presence with our expertly
+                                crafted websites and web applications. Let's bring your vision to life in the digital
+                                realm."</P>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-write text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">E-commerce Sites</h5>
+                            <P class="subtitle">Revolutionize Online Retail: Your one-stop solution for building dynamic
+                                e-commerce platforms tailored to your brand's needs."
+                                "From Concept to Checkout: Transform your business vision into a fully functional
+                                e-commerce website with our expertise in development and design."
+                                "Elevate Your Online Storefront: Harness the power of cutting-edge technology and
+                                intuitive user experiences to maximize sales and customer satisfaction."
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-package text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Css Animations</h5>
+                            <P class="subtitle">"Transforming Websites with Captivating Animations! Explore dynamic
+                                motion designs tailored to elevate user engagement and enhance visual storytelling. From
+                                subtle transitions to eye-catching effects, our animations breathe life into every web
+                                page. Elevate your online presence with our bespoke animation solutions. Let your
+                                website stand out with seamless, interactive motion graphics that leave a lasting
+                                impression."
+                                <br><br>
+
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-map-alt text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Portfolio Websites</h5>
+                            <P class="subtitle">"Crafting Digital Identities: Transforming Visions into Stunning
+                                Portfolio Websites. Elevate Your Online Presence: Bespoke Portfolio Websites Tailored to
+                                Your Unique Style. Your Portfolio, Your Story: Let's Build a Website That Captures Your
+                                Essence. Stand Out from the Crowd: Impress Potential Employers or Clients with a
+                                Professionally Designed Portfolio Website. Unlock Opportunities: Showcase Your Work and
+                                Achievements with a Custom Portfolio Website."</P><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Portfolio Filtering</h5>
+                            <P class="subtitle">"Revolutionize portfolio browsing with advanced filtering options.
+                                Enhance user experience by enabling dynamic sorting based on technology stack, project
+                                type, and industry. Streamline navigation with intuitive filter controls for effortless
+                                exploration. Empower visitors to find exactly what they're looking for, tailored to
+                                their specific needs. Elevate your portfolio presentation with customizable filters,
+                                setting your services apart from the competition."<br><br></P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                        <div class="card-header has-icon">
+                            <i class="ti-support text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Open Source Contributions</h5>
+                            <P class="subtitle">"Cultivating Collaboration: Offering my expertise for Open Source
+                                Contributions. Join me in advancing innovation and fostering community-driven solutions.
+                                With a passion for open-source development, I contribute to projects that shape the
+                                future of technology. Let's collaborate on impactful initiatives, driving positive
+                                change together. Explore my portfolio to see my contributions and discover opportunities
+                                for collaboration."<br><br></P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section bg-dark py-5">
+        <div class="container text-center">
+            <h2 class="text-light mb-5 font-weight-normal">And Also, I Am Available For FreeLance</h2>
+            <button class="btn bg-primary w-lg">Hire me</button>
+        </div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="container">
+            <h2 class="mb-5">Latest <span class="text-danger">News</span></h2>
+            <div class="row">
+                <!-- blog-card -->
+                <div class="blog-card">
+                    <div class="img-holder" style="width: 100%; height: auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://th.bing.com/th/id/OIP.ebSZFoCu3JUkDK92Qb6C_gAAAA?rs=1&pid=ImgDetMain"
+                             alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, Meyawo Landing page"
+                             style="width: 100%; height: auto; object-fit: contain;">
+                      </div>
+                      
+                    <div class="content-holder">
+                        <h6 class="title">Agile Tribes</h6>
+
+                        <p class="post-details">
+                            <a href="#">By: Admin</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                            <a href="#"><i class="ti-comment"></i> 264</a>
+                        </p>
+
+                        <p>Completed a 4-month internship focused on front-end technologies, including HTML, CSS,
+                            Bootstrap, JavaScript, jQuery, AJAX, and React. Gained hands-on experience in building
+                            dynamic and responsive web applications. Leveraged industry best practices and cutting-edge
+                            tools to deliver impactful solutions. Excited to apply these skills to new projects and
+                            continue growing in the field of web development</p>
+
+                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                    </div>
+                </div><!-- end of blog wrapper -->
+
+                <div class="blog-card">
+                    <div class="img-holder">
+                        <img src="https://wallpaperaccess.com/full/5673721.jpg"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="content-holder">
+                        <h6 class="title"> Learned</h6>
+
+                        <p class="post-details">
+                            <a href="#">By: Admin</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                            <a href="#"><i class="ti-comment"></i> 123</a>
+                        </p>
+
+                        <p>As part of my commitment to staying at the forefront of web development, I recently completed
+                            certifications in advanced JavaScript frameworks and responsive design principles. These new
+                            skills further enhance my ability to deliver cutting-edge solutions to clients.</p>
+
+                        <p><b>Learning in Rexknar Coding Accademy</b>
+                        </p>
+
+                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                    </div>
+                </div><!-- end of blog wrapper -->
+
+
+                <!-- blog-card -->
+                <div class="blog-card">
+                    <div class="img-holder">
+                        <img src="https://cdn.virily.com/wp-content/uploads/2019/09/bestfreelancertoolsmain.jpg"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="content-holder">
+                        <h4 class="title">Freelancer</h4>
+
+                        <p class="post-details">
+                            <a href="#">By: Admin</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> 431</a>
+                            <a href="#"><i class="ti-comment"></i> 312</a>
+                        </p>
+
+                        <p> "Embarking on a Freelance Journey: Offering full-stack expertise to bring your digital
+                            visions to life. With proficiency in both front-end and back-end development, I deliver
+                            dynamic and scalable solutions tailored to your needs. From crafting captivating user
+                            interfaces to optimizing database performance, I'm equipped to handle every aspect of your
+                            project. Let's collaborate to turn your ideas into reality and elevate your online presence.
+                            Contact me today to discuss how I can contribute to your next web development venture."</p>
+
+                        <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
+                    </div>
+                </div><!-- end of blog wrapper -->
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section contact" id="contact">
+        <div id="map" class="map"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id=" placeholder=" Message * rows="7"
+                                    required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in touch</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-mobile icon-md"></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">(+91)7418876749</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-map-alt icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Address :<br> <span class="text-muted">India , Tamilnadu</span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-envelope icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">johnjehin.jj@gmail.com</span>
+                                </h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4">
+                            <li class="social-item"><a class="social-link text-dark"
+                                    href="#" target="_blank"><i
+                                        class="ti-facebook" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark"
+                                    href="#"><i class="ti-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-google"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark"
+                                    href="https://www.instagram.com/santa_de_john7?igsh=cGpwaDJlMzFueHJi" target="_blank"><i
+                                        class="ti-instagram" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark"
+                                    href="https://www.linkedin.com/in/john-jehin-j/"><i class="ti-linkedin"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15799.022635637204!2d77.33001454496701!3d8.126341020451132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04fadc6ffa752d%3A0x67cf54180dc58e4b!2sAzhickal%2C%20Tamil%20Nadu%20629202!5e0!3m2!1sen!2sin!4v1741237857570!5m2!1sen!2sin"
+                    width="100%" height="40%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3">
+        <div class="container" style="display: flex;justify-content:center">
+            <p class="small mb-0 text-light">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> Created With <i
+                    class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span
+                        class="text-danger" title="Bootstrap 4 Themes and Dashboards">John Jehin J</span></a>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- Google mpas -->
+
+
+
+    <!-- stebin js -->
+    <script src="assets/js/jehin.js"></script>
+
+
+
+
+</body>
+
+</html>
